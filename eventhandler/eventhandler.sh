@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#Set readable date for logging purposes
+DATE=$(date +"%d-%m-%Y %H:%M:%S")
+
 if [[ $# -eq 0 ]] ; then
     echo 'No arguments given...exiting'
     exit 1
@@ -15,5 +18,5 @@ fi
 
 if [[ $status = "FAILED" ]]
 then
- echo "!!!SENDING SMS FAILED!!! $2"
+ echo "$DATE - SENDING SMS FAILED! - $2"
 fi
