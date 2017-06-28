@@ -5,7 +5,7 @@
 snmpget -v 1 -Oqv -c public 131.174.44.221 .1.3.6.1.4.1.318.1.1.1.11.1.1.0 > /dev/null 2>&1
 if [[ $? != 0 ]]
 then
-echo "SNMP UNAVAILABLE! Exiting..."
+echo "SNMP UNAVAILABLE! Exiting.."
 echo "Warning: smsserver.dccn.nl has detected a problem with getting SNMP values from UPS.dccn.nl, please check the connection of the UPS and/or SMSServer" | mail -s "WARNING: SNMP connection error to ups.dccn.nl" "helpdesk@fcdonders.ru.nl"
 exit 1
 else
