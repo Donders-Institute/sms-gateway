@@ -41,3 +41,32 @@ After installing SMS Server Tools 3, make sure your USB modem or any other suppo
 "cd /dev/" and check if TTYUSBxx (where xx is a number) is shown, this is the Serial interface of your USB modem.
 
 Once the device is properly detected we can continue with the configuration of SMS Server Tools 3.
+
+Open the configuration file of SMS Server Tools 3:
+
+nano /etc/smsd.conf
+
+Paste this information into the file (overwriting existing configuration file if you start from scratch)
+
+```bash
+# Example smsd.conf. Read the manual for a description
+
+devices = GSM1
+logfile = /var/log/smsd.log
+loglevel = 5
+spool_directory_order = yes
+delaytime_mainprocess = 1
+delaytime = 5
+eventhandler = /root/UPSGUARD_V1/eventhandler/eventhandler.sh
+
+[GSM1]
+device = /dev/ttyUSB2
+init = AT^CURC=0
+incoming = yes
+baudrate = 9600
+pin = 0000
+memory_start = 0
+detect_unexpected_input = no
+decode_unicode_text = no
+#incoming_utf8 = false
+```
