@@ -35,7 +35,7 @@ The program can run other external programs or scripts after events like recepti
 
 Done! the SMS Server Tools 3 utility is now installed and ready for use.
 
-# configuring SMS Server Tools 3:
+## configuring SMS Server Tools 3:
 
 After installing SMS Server Tools 3, make sure your USB modem or any other supported device is plugged in to a suitable USB port and check if it is being recognized by running the command:
 "cd /dev/" and check if TTYUSBxx (where xx is a number) is shown, this is the Serial interface of your USB modem.
