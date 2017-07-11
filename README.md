@@ -1,6 +1,13 @@
 # sms-gateway
 SMS gateway for sending and receiving SMS messages
 
+# hardware used:
+
+The following hardware was used for this project:
+
+- Raspberry PI 3 with 32GB Micro-SD
+- Huawei 3131 3G USB modem
+
 # software used:
 
 The following software was used for making this collection of scripts work:
