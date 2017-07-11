@@ -57,7 +57,7 @@ loglevel = 5
 spool_directory_order = yes
 delaytime_mainprocess = 1
 delaytime = 5
-eventhandler = /root/UPSGUARD_V1/eventhandler/eventhandler.sh
+eventhandler =
 
 [GSM1]
 device = /dev/ttyUSB2
