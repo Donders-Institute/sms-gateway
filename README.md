@@ -24,3 +24,20 @@ You can send short messages by simply storing text files into a special spool di
 The program can be run as a SMS daemon which can be started automatically when the operating system starts.
 
 The program can run other external programs or scripts after events like reception of a new message, successful sending and also when the program detects a problem. These programs can inspect the related text files and perform automatic actions.
+
+## Installation of SMS Server Tools 3:
+
+- Log in as root on the Linux system
+- use Wget or any other method to get the TAR file on the linux machine "wget http://smstools3.kekekasvi.com/packages/smstools3-3.1.21.tar.gz" (please note, this might not be the newest version, check the website for the newest version available.)
+- untar the file: "tar -xzf smstools*.tar.gz"
+- run "make"
+- run "make install"
+
+Done! the SMS Server Tools 3 utility is now installed and ready for use.
+
+# configuring SMS Server Tools 3:
+
+After installing SMS Server Tools 3, make sure your USB modem or any other supported device is plugged in to a suitable USB port and check if it is being recognized by running the command:
+"cd /dev/" and check if TTYUSBxx (where xx is a number) is shown, this is the Serial interface of your USB modem.
+
+Once the device is properly detected we can continue with the configuration of SMS Server Tools 3.
