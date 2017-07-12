@@ -70,3 +70,15 @@ detect_unexpected_input = no
 decode_unicode_text = no
 #incoming_utf8 = false
 ```
+
+###Change the following values:
+
+devices = GSMx (if you have multiple modems installed, increment as required)
+eventhandler = "Location to eventhandler script" ( for more details, see http://smstools3.kekekasvi.com/index.php?p=eventhandler )
+device = /dev/ttyUSB2 ( In our case ttyUSB2 is the serial interface of our modem )
+init = AT^CURC=0 ( These are optional commands that the daemon sends to the modem when initializing the modem itself (this command disables Debugging echo's on the serial interface) )
+pin = 0000 ( this is the pin-code which is on the sim-card in the modem )
+
+The rest of the settings are default, and can be kept this way.
+
+To get the full list of options, follow this link: http://smstools3.kekekasvi.com/index.php?p=configure
