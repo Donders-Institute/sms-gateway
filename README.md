@@ -85,7 +85,7 @@ To get the full list of options, follow this link: http://smstools3.kekekasvi.co
 
 ## Using SMS Server Tools 3:
 
-There are 2 main methods of sending message using SMS Server Tools 3131
+There are 2 main methods of sending message using SMS Server Tools 3
 
 - Creating a SMS file in the "/var/spool/sms/outgoing" folder
 - Using the Binary "sendsms" to send an sms-gateway
