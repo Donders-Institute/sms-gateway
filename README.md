@@ -71,7 +71,7 @@ decode_unicode_text = no
 #incoming_utf8 = false
 ```
 
-###Change the following values:
+### Change the following values:
 
 devices = GSMx (if you have multiple modems installed, increment as required)
 eventhandler = "Location to eventhandler script" ( for more details, see http://smstools3.kekekasvi.com/index.php?p=eventhandler )
