@@ -82,3 +82,51 @@ decode_unicode_text = no
 The rest of the settings are default, and can be kept this way.
 
 To get the full list of options, follow this link: http://smstools3.kekekasvi.com/index.php?p=configure
+
+## Using SMS Server Tools 3:
+
+There are 2 main methods of sending message using SMS Server Tools 3131
+
+- Creating a SMS file in the "/var/spool/sms/outgoing" folder
+- Using the Binary "sendsms" to send an sms-gateway
+
+### method 1: creating SMS file
+
+Following is an example or a valid SMS file which will be processed by SMS Server Tools 3:
+
+```bash
+To: 31612345678
+
+This a test-message to be sent to the above number
+```
+
+- Please note the Capital "T" in the To: line, this is essential!
+- The Phone number should be formatted as above (country number without 00 or + , followed by the phone number without the leading 0)
+- The blank line after the phone number and options is also needed when creating an SMS file, this tells the daemon that the message itself is coming up.
+
+There is also an option to parse options to the daemon by using the SMS file, and example of a SMS file with an option is:
+
+```bash
+To: 31612345678
+Flash: yes
+
+This a flash SMS message!
+```
+
+Here you can see that the "Flash" option is set to Yes, this SMS message will be sent as a flash message, which will show it directly on the phone of the recipient.
+
+To see all the options, go to: http://smstools3.kekekasvi.com/index.php?p=fileformat
+
+### method 2: using "sendsms" command:
+
+There is also the possibility to send an sms using the "sendsms" command.
+
+This is the most easy way to interface with the Sms Server Tools.
+
+An example command is:
+
+```bash
+sendsms 31612345678 'This is a test SMS using the binary'
+```
+
+As you can see this is a really easy way to send an sms, you do not need to worry about formatting whatsoever.
